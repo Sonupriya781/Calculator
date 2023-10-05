@@ -1,0 +1,389 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /*background-image: url('/background.jpg');*/
+  color: white;
+  font-family: "Fira Sans", sans-serif;
+  background-color: rgba(0, 0, 0, 0.897);
+  z-index: 1;
+}
+nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 5%;
+  background-color: #aa032d;
+}
+nav .title {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: 0.2s ease-in;
+}
+nav ul li a {
+  
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+nav ul li:hover {
+  background-color: rgb(5, 155, 155);
+}
+
+nav ul li a:hover {
+  color:white;
+}
+nav .menu {
+  font-size: 30px;
+  font-weight: bolder;
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  nav .menu {
+      display: flex;
+  }
+
+  nav .navbar {
+      display: none;
+  }
+
+  .sideNavigationBar {
+      display: block !important;
+  }
+}
+.sideNavigationBar {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0%;
+  background-color: #aa032d;
+  overflow-x: hidden;
+  transition: 0.3s ease-in;
+  padding-top: 60px;
+  display: none;
+}
+.sideNavigationBar a {
+  padding: 8px 8px 8px 40px;
+  display: block;
+  font-size: 25px;
+  font-weight: 500;
+  color: #d1d1d1;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.sideNavigationBar a button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  border-style: none;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #aa032d;
+}
+.sideNavigationBar a:hover {
+  color: white;
+  transition: 0.3s;
+}
+.sideNavigationBar .closeButton {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+.line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2% 5%;
+}
+.line .layer1 {
+  padding-right: 50px;
+}
+
+.layer1 h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  color: white;
+}
+.layer1 button {
+  width: 200px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border-style: none;
+  color: black;
+  font-size: 17px;
+  font-weight: 600;
+  background-image: linear-gradient(rgb(250, 185, 221), rgb(223, 22, 89));
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+@media screen and (max-width: 980px) {
+  .layer2 img {
+      width: 350px;
+  }
+
+  .layer1 h1 {
+      font-size: 40px;
+  }
+
+  .layer1 p {
+      font-size: 17px;
+  }
+
+  .line {
+      margin-top: 80px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .layer1 h1 {
+      font-size: 35px;
+  }
+
+  .line {
+      flex-direction: column;
+  }
+
+  .line .layer1 {
+      padding: 30px;
+  }
+}
+#About .content{
+  display: block;
+  color: rgb(39, 38, 37);
+  text-align: center;
+}
+/*#About .title span{
+  font-size: 20px;
+  color: white;
+}*/
+#About .content .title{
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding: 5px 5px;
+  background-color: black;
+  border-radius: 25px;
+  font-size: 20px;
+  color: white;
+  margin-left: 42%;
+  margin-right: 45%;
+}
+/*#Games .title span{
+  font-size: 20px;
+  color: white;
+}*/
+#Games .content .title{
+  margin-bottom: 20px;
+  padding: 10px ;
+  padding-left: 20px;
+  background-color: black;
+  border-radius: 25px;
+  font-size: 20px;
+  color: white;
+  margin-left: 42%;
+  margin-right: 45%;
+}
+#About .content .box{
+  border-radius: 25%;
+  margin-top: 10px;
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-bottom: 10px;
+}
+#About{
+  margin-bottom: 10px;
+  background-color: rgb(197, 189, 189);
+  width: 100%;
+}
+#Games{
+  margin-bottom: 20px;
+  margin-top: 10px;
+  background-image: url('images/background.jpg');
+  width: 100%;
+  z-index: -1;
+  color: rgb(110, 154, 196);
+  padding-bottom: 20px;
+}
+#SignUp{
+  margin-bottom: 0px;
+  background-image: url('images/background.jpg');
+  width: 100%;
+  z-index: -1;
+}
+#Games .boxes .box .topic a {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  background-color: #aa032d;
+  border-radius: 20%;
+}
+.Games .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#Games .boxes .box {
+  margin: 10px 20px;
+  max-width: 250px;
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(219, 217, 217, 0.247);
+  cursor: default;
+  display: block;
+  height: 500px;
+}
+#Games .boxes .box p{
+  margin-top: 30px;
+}
+#Games .boxes .box img{
+  display: absolute;
+  width: fit-content;
+  height: 200px;
+  margin-bottom: 20px;
+}
+.Form .content{
+   text-align: center;
+   background-color: rgba(255, 255, 255, 0.767);
+   display: block;
+   padding-top:20px;
+   padding-bottom: 30px;
+   color: black;
+   margin-bottom: 20px;
+   border-radius: 25%;
+   box-shadow: 0 5px 10px #d1d1d1;
+}
+.input2 {
+  margin-top: 10;
+}
+
+.label1 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  font-weight: bolder;
+  color: black;
+}
+.input1 input {
+  border-radius: 13px;
+  padding: 6px;
+  background-color: #8cc099;
+}
+.input2 input {
+  border-color: rgb(5, 5, 5);
+  width: 400px;
+}
+.button {
+  margin-top: 12px;
+  margin-left: 5px;
+}
+
+.button button {
+  width: 162px;
+  height: 35px;
+  border-radius: 12px;
+  border-color: transparent;
+}
+
+.button button:hover {
+  background-color: #8cc099;
+}
+#SignUp .content .heading {
+ margin-bottom: 30px;
+ padding-bottom: 10px;
+ padding-top: 20px;
+ color: rgb(5, 61, 5);
+ font-size: 30px;
+ font-weight: bold;
+}
+.footer {
+  background-color: rgb(141, 21, 141);
+  margin-top: 30px;
+  color: rgb(231, 187, 236);
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 5%;
+  border-top: #aa032d solid 3px;
+  
+}
+.footer .contact{
+  width: 60%;
+}
+.footer .contact div{
+  display: inline;
+}
+.footer .contact .title1{
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 30px;
+}
+.footer .contact .links{
+  margin-right: 0px;
+  margin-bottom: 20px;
+}
+.footer .contact .links a{
+  margin-inline: 5px;
+}
+.footer .copyright{
+    margin-left: 20%;
+    background-color: #f85cfd;
+    border-radius: 20px;
+    width: 150px;
+    padding: 10px;
+    padding-left: 10px;
+}
+.footer .copyright span{
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+hr{
+  background-color: white;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
