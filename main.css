@@ -123,22 +123,41 @@ nav .menu {
   margin-bottom: 10px;
   color: white;
 }
-.layer1 button {
+.layer1 a button {
   width: 200px;
   padding: 12px 20px;
+  text-align: center;
   border-radius: 20px;
   border-style: none;
-  color: black;
   font-size: 17px;
   font-weight: 600;
-  background-image: linear-gradient(rgb(250, 185, 221), rgb(223, 22, 89));
+  background-image: linear-gradient(rgb(255, 72, 118), rgb(168, 3, 58));
   margin-top: 20px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.5s;
 }
-a {
+.layer1 a button span{
   text-decoration: none;
-  color: black;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.layer1 a button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.layer1 a button:hover span {
+  padding-right: 20px;
+}
+.layer1 a button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 @media screen and (max-width: 980px) {
   .layer2 img {
@@ -223,7 +242,7 @@ a {
   background-image: url('images/background.jpg');
   width: 100%;
   z-index: -1;
-  color: rgb(110, 154, 196);
+  color: rgb(55, 103, 148);
   padding-bottom: 20px;
 }
 #SignUp{
@@ -232,7 +251,7 @@ a {
   width: 100%;
   z-index: -1;
 }
-#Games .boxes .box .topic a {
+#Games .boxes .box .topic a button {
   font-size: 20px;
   font-weight: 500;
   padding: 10px;
@@ -252,10 +271,11 @@ a {
   text-align: center;
   border-radius: 12px;
   padding: 30px 10px;
-  box-shadow: 0 5px 10px rgba(219, 217, 217, 0.247);
+  box-shadow: 0px 10px 7px rgba(219, 217, 217, 0.247);
   cursor: default;
   display: block;
   height: 500px;
+  background-color: #c2bfbf;
 }
 #Games .boxes .box p{
   margin-top: 30px;
@@ -366,6 +386,17 @@ a {
 hr{
   background-color: white;
   
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
 }
 
 
